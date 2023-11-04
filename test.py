@@ -1,10 +1,16 @@
-from turtle import Turtle, Screen
+from prettytable import PrettyTable
 
-ramu = Turtle()
-ramu.shape('turtle')
-ramu.color('red','green')
-ramu.setpos(-200,0)
+pikachu_table = PrettyTable()
 
-myscreen = Screen()
+pikachu_table.field_names = ['PokeNames','Types']
+pikachu_table.add_rows(
+    [
+        ['Pikachu','Electric'],
+        ['Squirtle','Water'],
+        ['Charmander','Fire']
+    ]
+)
 
-myscreen.exitonclick()
+pikachu_table.align = 'l'
+
+print(pikachu_table)
