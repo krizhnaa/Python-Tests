@@ -25,3 +25,11 @@
 # pikachu_table.align = 'l'
 #
 # print(pikachu_table)
+
+class User:
+    pass
+
+user_1 = User()
+
+
+
