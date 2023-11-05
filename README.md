@@ -5,3 +5,4 @@ Just a Repo for all the Objective practises for Python!!!
 > 5/11/23 : Learning to create classes
 
             # PascalCase to be used while naming a class in python.
+            # Creating Attribute for the Objects.
