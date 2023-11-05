@@ -27,15 +27,17 @@
 # print(pikachu_table)
 
 class User:
-    pass
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
 
-user_1 = User()
-user_1.id = '001'
-user_1.name = "Krishna"
 
-user_2 = User()
-user_2.id = "002"
-user_2.name = 'some1'
+user_1 = User("001", "Krishna")
+user_2 = User('002','Vichu')
+print(user_1.id, user_2.name)
+
+
+
 
 
 
