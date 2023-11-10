@@ -37,16 +37,24 @@ class User:
         user.followers+=1
         self.following+=1
 
+    def unfollow(self, user ):
+        user.followers-=1
+        self.following-=1
 
 user_1 = User("001", "Krishna")
 user_2 = User('002','Vichu')
 # print(user_1.id, user_2.name)
 
 user_1.follow(user_2)
-print(user_1.name,user_1.followers)
+
 print(user_1.following)
 print(user_2.name, user_2.followers)
-print(user_2.following)
+
+user_1.unfollow(user_2)
+
+print(user_1.following)
+print(user_2.name, user_2.followers)
+
 
 
 
