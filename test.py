@@ -55,13 +55,18 @@
 # print(user_1.following)
 # print(user_2.name, user_2.followers)
 
+#Drawing a Square with turtle challenge
+
 from turtle import Turtle, Screen
 
 miya = Turtle()
 
-miya.shape('turtle')
+miya.shape('arrow')
 miya.color('red')
 
+for i in range(0,4):
+    miya.forward(100)
+    miya.right(90)
 
 screen = Screen()
 screen.exitonclick()
