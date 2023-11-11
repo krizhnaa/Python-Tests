@@ -59,7 +59,7 @@ from turtle import Turtle, Screen
 
 miya = Turtle()
 
-
+miya.shape('turtle')
 miya.color('red')
 
 
