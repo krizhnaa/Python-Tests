@@ -57,9 +57,10 @@
 
 #Drawing a Square with turtle challenge
 
-from turtle import Turtle, Screen
+# from turtle import Turtle, Screen
+import turtle as T
 
-miya = Turtle()
+miya = T.Turtle()
 
 miya.shape('arrow')
 miya.color('red')
