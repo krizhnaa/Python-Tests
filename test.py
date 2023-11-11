@@ -58,16 +58,20 @@
 from turtle import Turtle, Screen
 import randomcolor
 
-
 rand_color = randomcolor.RandomColor()
-color = rand_color.generate()
-
 miya = Turtle()
 miya.shape('arrow')
 
 #Drawing Triangle
+#360/3 = 180
 
-
+sides = [3,4,5,6,7,8,9,10]
+for shape in sides:
+    degree = 360/shape
+    miya.color(rand_color.generate())
+    for i in range(shape):
+        miya.right(degree)
+        miya.forward(100)
 
 
 screen = Screen()
