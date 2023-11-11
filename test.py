@@ -56,18 +56,19 @@
 # print(user_2.name, user_2.followers)
 
 from turtle import Turtle, Screen
-# import turtle as T
+import randomcolor
+
+
+rand_color = randomcolor.RandomColor()
+color = rand_color.generate()
 
 miya = Turtle()
-
 miya.shape('arrow')
-miya.color('red')
 
-for i in range(0,20):
-    miya.forward(5)
-    miya.penup()
-    miya.forward(5)
-    miya.pendown()
+#Drawing Triangle
+
+
+
 
 screen = Screen()
 screen.exitonclick()
