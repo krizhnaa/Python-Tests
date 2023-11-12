@@ -97,29 +97,42 @@
 # screen = Screen()
 # screen.exitonclick()
 
-from turtle import Turtle, Screen, colormode
-import random
+# from turtle import Turtle, Screen, colormode
+# import random
+#
+# miya = Turtle()
+# colormode(255)
+# miya.shape('arrow')
+#
+# def random_num():
+#     r,g,b = random.randint(0,255), random.randint(0,255), random.randint(0,255)
+#     random_color = (r,g,b)
+#     return random_color
+#
+# miya.speed('fastest')
+#
+# while True:
+#     miya.color(random_num())
+#     miya.circle(50)
+#     curr_head = miya.heading()
+#     miya.setheading(curr_head + 5)
+#
+#
+#
+# screen = Screen()
+# screen.exitonclick()
+
+from turtle import Turtle, Screen
 
 miya = Turtle()
-colormode(255)
-miya.shape('arrow')
+miya.shape('turtle')
 
-def random_num():
-    r,g,b = random.randint(0,255), random.randint(0,255), random.randint(0,255)
-    random_color = (r,g,b)
-    return random_color
-
-miya.speed('fastest')
-
-while True:
-    miya.color(random_num())
-    miya.circle(50)
-    curr_head = miya.heading()
-    miya.setheading(curr_head + 5)
-    
-    
+def move_for():
+    miya.forward(10)
 
 screen = Screen()
+screen.onkey(key='space', fun=move_for)
+screen.listen()
 screen.exitonclick()
 
 
