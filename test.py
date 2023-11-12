@@ -124,26 +124,40 @@
 
 from turtle import Turtle, Screen
 
-miya = Turtle()
-krishna = Turtle()
-vichu = Turtle()
-leta = Turtle()
-
-vichu.shape('turtle')
-leta.shape('turtle')
-miya.shape('turtle')
-krishna.shape('turtle')
+miya = Turtle(shape='turtle')
+krishna = Turtle(shape='turtle')
+vichu = Turtle(shape='turtle')
+leta = Turtle(shape='turtle')
+gulu = Turtle(shape='turtle')
+lulu = Turtle(shape='turtle')
 
 vichu.color('red')
 leta.color('green')
 krishna.color('black')
 miya.color('yellow')
+gulu.color('yellow')
+lulu.color('yellow')
 
-def move_for():
-    miya.forward(10)
+miya.penup()
+krishna.penup()
+vichu.penup()
+leta.penup()
+gulu.penup()
+lulu.penup()
+
+miya.goto(x=-230, y=-100)
+vichu.goto(x=-230, y=-60)
+krishna.goto(x=-230, y=-20)
+leta.goto(x=-230, y=20)
+gulu.goto(x=-230, y=20)
+lulu.goto(x=-230, y=20)
+
+
+
 
 screen = Screen()
-screen.onkey(key='space', fun=move_for)
+screen.setup(width=500, height=400)
+user_bet = screen.textinput(title='Make your bet', prompt="What color is your turtle? ")
 screen.listen()
 screen.exitonclick()
 
