@@ -55,12 +55,7 @@
 # print(user_1.following)
 # print(user_2.name, user_2.followers)
 
-from turtle import Turtle, Screen, colormode
-import random
 
-miya = Turtle()
-colormode(255)
-miya.shape('circle')
 
 #Drawing Triangle
 #360/3 = 180
@@ -73,27 +68,62 @@ miya.shape('circle')
 #         miya.right(degree)
 #         miya.forward(100)
 
+# from turtle import Turtle, Screen, colormode
+# import random
+
+# miya = Turtle()
+# colormode(255)
+# miya.shape('circle')
+
+# def random_num():
+#     r,g,b = random.randint(0,255), random.randint(0,255), random.randint(0,255)
+#     random_color = (r,g,b)
+#     return random_color 
+
+# def randomize_direction():
+#     choice = [ 0, 90, 180, 270]
+#     return random.choice(choice)
+
+# miya.speed(10)
+# miya.shapesize(outline=0)
+# miya.pensize(10)
+
+# while True:
+#     miya.forward(30)
+#     miya.color(random_num())
+#     miya.setheading(randomize_direction())
+
+
+# screen = Screen()
+# screen.exitonclick()
+
+from turtle import Turtle, Screen, colormode
+import random
+
+miya = Turtle()
+colormode(255)
+miya.shape('arrow')
+
 def random_num():
     r,g,b = random.randint(0,255), random.randint(0,255), random.randint(0,255)
     random_color = (r,g,b)
-    return random_color 
+    return random_color
 
-def randomize_direction():
-    choice = [ 0, 90, 180, 270]
-    return random.choice(choice)
-
-miya.speed(10)
-miya.shapesize(outline=0)
-miya.pensize(10)
+miya.speed('fastest')
 
 while True:
-    miya.forward(30)
     miya.color(random_num())
-    miya.setheading(randomize_direction())
-
+    miya.circle(50)
+    curr_head = miya.heading()
+    miya.setheading(curr_head + 5)
+    
+    
 
 screen = Screen()
 screen.exitonclick()
+
+
+
 
 
 
