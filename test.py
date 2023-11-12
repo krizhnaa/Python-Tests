@@ -55,12 +55,11 @@
 # print(user_1.following)
 # print(user_2.name, user_2.followers)
 
-from turtle import Turtle, Screen
+from turtle import Turtle, Screen, colormode
 import random
-import randomcolor
 
-rand_color = randomcolor.RandomColor()
 miya = Turtle()
+colormode(255)
 miya.shape('circle')
 
 #Drawing Triangle
@@ -74,22 +73,28 @@ miya.shape('circle')
 #         miya.right(degree)
 #         miya.forward(100)
 
+def random_num():
+    r,g,b = random.randint(0,255), random.randint(0,255), random.randint(0,255)
+    random_color = (r,g,b)
+    return random_color 
+
 def randomize_direction():
     choice = [ 0, 90, 180, 270]
     return random.choice(choice)
 
-miya.speed(4)
+miya.speed(10)
 miya.shapesize(outline=0)
 miya.pensize(10)
 
 while True:
     miya.forward(30)
-    miya.color(rand_color.generate())
+    miya.color(random_num())
     miya.setheading(randomize_direction())
 
 
 screen = Screen()
 screen.exitonclick()
+
 
 
 
