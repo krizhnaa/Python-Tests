@@ -123,7 +123,9 @@
 # screen.exitonclick()
 
 from turtle import Turtle, Screen
+import random
 
+is_race_on = False
 screen = Screen()
 screen.setup(width=500, height=400)
 user_bet = screen.textinput(title='Make your bet', prompt="What color is your turtle? ")
@@ -131,12 +133,31 @@ screen.listen()
 
 colors = ['red', 'green', 'black', 'purple', 'blue', 'yellow']
 y_pos = [-100, -60, -20, 20, 60, 100]
+turtles = []
 
 for turtle_index in range(0,6):
-    miya = Turtle(shape='turtle')
-    miya.penup()
-    miya.goto(x=-230,y=y_pos[turtle_index])
-    miya.color(colors[turtle_index])
+    new_turtle = Turtle(shape='turtle')
+    new_turtle.penup()
+    new_turtle.goto(x=-230,y=y_pos[turtle_index])
+    new_turtle.color(colors[turtle_index])
+    turtles.append(new_turtle)
+
+
+
+if user_bet:
+    is_race_on = True
+
+while is_race_on:
+    for turtle in turtles:
+        turtle.forward(random.randint(0,10))
+        if turtle.xcor() >= 230:
+            is_race_on = False
+            winning_color = turtle.pencolor()
+
+if user_bet.lower() == winning_color:
+    print(f"Congrats Your {winning_color} color Turtle has won")
+else:
+    print(f"Your turtle lost, the winning turtle was {winning_color} in  color")
 
 
 screen.exitonclick()
