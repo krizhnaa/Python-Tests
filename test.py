@@ -125,7 +125,19 @@
 from turtle import Turtle, Screen
 
 miya = Turtle()
+krishna = Turtle()
+vichu = Turtle()
+leta = Turtle()
+
+vichu.shape('turtle')
+leta.shape('turtle')
 miya.shape('turtle')
+krishna.shape('turtle')
+
+vichu.color('red')
+leta.color('green')
+krishna.color('black')
+miya.color('yellow')
 
 def move_for():
     miya.forward(10)
