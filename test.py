@@ -124,41 +124,21 @@
 
 from turtle import Turtle, Screen
 
-miya = Turtle(shape='turtle')
-krishna = Turtle(shape='turtle')
-vichu = Turtle(shape='turtle')
-leta = Turtle(shape='turtle')
-gulu = Turtle(shape='turtle')
-lulu = Turtle(shape='turtle')
-
-vichu.color('red')
-leta.color('green')
-krishna.color('black')
-miya.color('yellow')
-gulu.color('yellow')
-lulu.color('yellow')
-
-miya.penup()
-krishna.penup()
-vichu.penup()
-leta.penup()
-gulu.penup()
-lulu.penup()
-
-miya.goto(x=-230, y=-100)
-vichu.goto(x=-230, y=-60)
-krishna.goto(x=-230, y=-20)
-leta.goto(x=-230, y=20)
-gulu.goto(x=-230, y=20)
-lulu.goto(x=-230, y=20)
-
-
-
-
 screen = Screen()
 screen.setup(width=500, height=400)
 user_bet = screen.textinput(title='Make your bet', prompt="What color is your turtle? ")
 screen.listen()
+
+colors = ['red', 'green', 'black', 'purple', 'blue', 'yellow']
+y_pos = [-100, -60, -20, 20, 60, 100]
+
+for turtle_index in range(0,6):
+    miya = Turtle(shape='turtle')
+    miya.penup()
+    miya.goto(x=-230,y=y_pos[turtle_index])
+    miya.color(colors[turtle_index])
+
+
 screen.exitonclick()
 
 
