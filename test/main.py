@@ -1,4 +1,4 @@
-
+import sys, fileinput
 names = []
 
 with open("./Input/Names/invited_names.txt") as file:
@@ -7,8 +7,10 @@ with open("./Input/Names/invited_names.txt") as file:
 
 # data_into_list = data.replace('\n', ' ')
 
-with open("./Input/Letters/starting_letter.txt") as file:
+with open("./Input/Letters/starting_letter.txt", mode='r') as file:
     letter = file.read()
-    replaced_letter = letter.replace('[name]', names[0])
-
+    for name in names:
+        replaced_letter = letter.replace('name', name)
+        with open(f'./Output/ReadyToSend/{name}_letter.txt', mode='w') as filee:
+            filee.write(replaced_letter)
 
