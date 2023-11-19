@@ -28,17 +28,34 @@
 # fahren = ( monday_temp * 9/5 ) + 32
 # print(fahren)
 
-import pandas
+# import pandas
+#
+# data_dict = {
+#     'students' : ['Amy', 'James', 'Vichu'],
+#     'scores' : [10, 12, 15]
+# }
+#
+# data = pandas.DataFrame(data_dict)
+# # print(data)
+#
+# data.to_csv('data_csv')
+
+import pandas as py
+
+data = py.read_csv('2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv')
+gray_color_count = len(data[data['Primary Fur Color'] == 'Gray'])
+red_color_count = len(data[data['Primary Fur Color'] == 'Cinnamon'])
+black_color_count = len(data[data['Primary Fur Color'] == 'Black'])
+
 
 data_dict = {
-    'students' : ['Amy', 'James', 'Vichu'],
-    'scores' : [10, 12, 15]
+    'Fur' : ['grey', 'red', 'black'],
+    'Count' : [gray_color_count, red_color_count, black_color_count]
 }
 
-data = pandas.DataFrame(data_dict)
-# print(data)
+df_data = py.DataFrame(data_dict)
 
-data.to_csv('data_csv')
+df_data.to_csv('csv_data')
 
 
 
