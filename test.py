@@ -21,4 +21,8 @@
 import pandas
 
 data = pandas.read_csv('weather_data.csv')
-print(data['temp'])
+datas = data['temp'].tolist()
+# for dat in datas:
+#     sum += dat
+avg = sum(datas) / len(datas)
+print(avg)
