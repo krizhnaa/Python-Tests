@@ -9,3 +9,5 @@ Just a Repo for all the Objective practises for Python!!!
             # Using Constructors.
 
 > 18/11/23 : Learning to read from and write to a file
+
+> 19/11/23 : Learning to manipulate data in CSV file.

@@ -1,5 +1,7 @@
-with open("../../../../my_file.txt") as file:
-    contents = file.read()
-    # file.write('\n')
-    # file.write("Ok NVM")
-    print(contents)
+with open('./weather_data.csv') as file:
+    temp = file.readlines()
+    data = []
+    for _ in temp:
+        new_data = _.strip()
+        data.append(new_data)
+    print(data)
