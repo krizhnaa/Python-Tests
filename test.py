@@ -6,9 +6,19 @@
 #         data.append(new_data)
 #     print(data)
 
-import csv
+# import csv
+#
+# with open('./weather_data.csv') as data_file:
+#     data = csv.reader(data_file)
+#     temp = []
+#     temperature = []
+#     for row in data:
+#         temp.append(row[1])
+#     for dats in temp[1:]:
+#         temperature.append(int(dats))
+#     print(temperature)
 
-with open('./weather_data.csv') as data_file:
-    data = csv.reader(data_file)
-    for row in data:
-        print(row)
+import pandas
+
+data = pandas.read_csv('weather_data.csv')
+print(data['temp'])
