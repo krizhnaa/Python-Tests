@@ -18,11 +18,31 @@
 #         temperature.append(int(dats))
 #     print(temperature)
 
+# import pandas
+#
+# data = pandas.read_csv('weather_data.csv')
+
+# print(data[data.temp == data.temp.max()])
+# monday = data[data.day == 'Monday']
+# monday_temp = monday.temp[0]
+# fahren = ( monday_temp * 9/5 ) + 32
+# print(fahren)
+
 import pandas
 
-data = pandas.read_csv('weather_data.csv')
-datas = data['temp'].tolist()
-# for dat in datas:
-#     sum += dat
-avg = sum(datas) / len(datas)
-print(avg)
+data_dict = {
+    'students' : ['Amy', 'James', 'Vichu'],
+    'scores' : [10, 12, 15]
+}
+
+data = pandas.DataFrame(data_dict)
+# print(data)
+
+data.to_csv('data_csv')
+
+
+
+
+
+
+
