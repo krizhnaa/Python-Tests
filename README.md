@@ -10,4 +10,6 @@ Just a Repo for all the Objective practises for Python!!!
 
 > 18/11/23 : Learning to read from and write to a file
 
-> 19/11/23 : Learning to manipulate data in CSV file.
+> 19/11/23 : Learning to manipulate data in CSV file
+
+> 21/11/23 : List Comprehensions.
