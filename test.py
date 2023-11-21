@@ -1,5 +1,5 @@
 
-numbers = [68, 332, 419]
+name = 'Krishna'
 
-new_list = [ n + 1 for n in numbers]
+new_list = [ n for n in name]
 print(new_list)
