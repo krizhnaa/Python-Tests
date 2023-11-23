@@ -13,3 +13,5 @@ Just a Repo for all the Objective practises for Python!!!
 > 19/11/23 : Learning to manipulate data in CSV file
 
 > 21/11/23 : List Comprehensions.
+
+> 23/11/23 : Dictionary comprehension
