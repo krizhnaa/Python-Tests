@@ -1,11 +1,12 @@
+import tkinter as tk
 
-student_dict = {
-    'Name' : ["Krishna", "Rahul", "Letha"],
-    'Marks' : [69, 34, 99]
-}
+window = tk.Tk()
+window.title("GUI")
+window.minsize(500, 300)
 
-import pandas
+labell = tk.Label(text="Hey Tkinter", font=("Arial", 24))
+labell.pack()
 
-student_df = pandas.DataFrame(student_dict)
 
-print(student_df)
+
+window.mainloop()

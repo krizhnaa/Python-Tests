@@ -15,3 +15,5 @@ Just a Repo for all the Objective practises for Python!!!
 > 21/11/23 : List Comprehensions.
 
 > 23/11/23 : Dictionary comprehension
+
+> 19/12/23 : Learning abt Tkinter
