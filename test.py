@@ -1,9 +1,11 @@
-weather_c = eval(input())
-# 🚨 Don't change code above 👆
 
+student_dict = {
+    'Name' : ["Krishna", "Rahul", "Letha"],
+    'Marks' : [69, 34, 99]
+}
 
-# Write your code 👇 below:
+import pandas
 
-weather_f = { (day, (temp * 9/5) + 32) for (day, temp) in weather_c.items() }
+student_df = pandas.DataFrame(student_dict)
 
-print(weather_f)
+print(student_df)
