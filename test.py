@@ -1,12 +1,8 @@
-import tkinter as tk
 
-window = tk.Tk()
-window.title("GUI")
-window.minsize(500, 300)
+def add(*nums):
+    sum = 0
+    for n in nums:
+        sum+=n
+    print(sum)
 
-labell = tk.Label(text="Hey Tkinter", font=("Arial", 24))
-labell.pack()
-
-
-
-window.mainloop()
+add(2, 5, 10, 54)
