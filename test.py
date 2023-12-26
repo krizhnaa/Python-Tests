@@ -10,14 +10,16 @@ my_label.pack()
 my_label["text"] = "Lol I changed it"
 my_label.config(text="Lololol")
 
+input = Entry()
+input.pack()
 
 def button_clicked():
-    my_label["text"] = "CLickeddd"
+    display_this = input.get()
+    my_label["text"] = display_this
+
 
 button = Button(text="Click Me", command=button_clicked)
 button.pack()
-
-
 
 
 
