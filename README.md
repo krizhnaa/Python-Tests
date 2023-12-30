@@ -19,3 +19,5 @@ Just a Repo for all the Objective practises for Python!!!
 > 19/12/23 : Learning abt Tkinter
 
 > 29/12/23 : Learning abt Try, Except, Else and Finally.
+
+> 30/12/23 : SMTP Library
