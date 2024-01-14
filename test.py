@@ -1,10 +1,4 @@
-import smtplib
+import requests
 
-my_mail = "krizhnatester@gmail.com"
-password = ""
-
-connection = smtplib.SMTP("smtp.gmail.com")
-connection.starttls()
-connection.login(user=my_mail, password=password)
-connection.sendmail(from_addr=my_mail, to_addrs="", msg="Heyy")
-connection.close()
+response = requests.get(url="http://api.open-notify.org/iss-now.json")
+print(response)

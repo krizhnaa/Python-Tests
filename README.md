@@ -21,3 +21,5 @@ Just a Repo for all the Objective practises for Python!!!
 > 29/12/23 : Learning abt Try, Except, Else and Finally.
 
 > 30/12/23 : SMTP Library
+
+> 13/1/23 : Learning abt API Requests
