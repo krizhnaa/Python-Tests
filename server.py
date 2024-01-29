@@ -3,21 +3,15 @@ import requests
 
 app = Flask(__name__)
 
-@app.route("/guess/<name>")
-def home(name):
-    gender_response = requests.get(url=f"https://api.genderize.io?name={name}")
-    gr = gender_response.json()['gender']
-    age_response = requests.get(url=f"https://api.agify.io?name={name}")
-    ar = age_response.json()['age']
-    return render_template('index.html', name=name, gr=gr, ar=ar)
+@app.route("/blog")
+def home():
+    blog_response = requests.get(url="https://api.npoint.io/c790b4d5cab58020d391")
+    blogs = blog_response.json()
+    return render_template('index.html', blogs=blogs)
 
-# name = "Angela"
-# gender_response = requests.get(url=f"https://api.genderize.io?name={name}")
-# gr = gender_response.json()['gender']
-# age_response = requests.get(url=f"https://api.agify.io?name={name}")
-# ar = age_response.json()['age']
-# print(gr)
-# print(ar)
+# blog_response = requests.get(url="https://api.npoint.io/c790b4d5cab58020d391")
+# blogs = blog_response.json()
+# print(blogs)
 
 if __name__ == "__main__":
     app.run(debug=True)
