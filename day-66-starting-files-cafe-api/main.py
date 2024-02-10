@@ -43,7 +43,7 @@ class Cafe(db.Model):
             "has_wifi": self.has_wifi,
             "has_sockets": self.has_sockets,
             "can_take_calls": self.can_take_calls,
-            "coffee_price": self.coffee_price,
+            "coffee_price": self.coffee_price[1:],
         }
 
 
@@ -84,6 +84,16 @@ def get_all_cafes():
     all_cafes = result.scalars().all()
     return jsonify(cafes=[cafe.to_dict() for cafe in all_cafes])
 
+
+@app.route("/search")
+def get_cafe_at_location():
+    loc = request.args.get("loc")
+    result = db.session.execute(db.select(Cafe).where(Cafe.location == loc))
+    all_cafes = result.scalars().all()
+    if all_cafes:
+        return jsonify(cafes=[cafe.to_dict() for cafe in all_cafes])
+    else:
+        return jsonify(error="Not Found")
 
 # HTTP POST - Create Record
 
